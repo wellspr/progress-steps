@@ -10,5 +10,70 @@ html {
 
 body {
     box-sizing: border-box;
-    
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: darkblue;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    margin: 1rem 5rem
+}
+
+.container {
+    flex-grow: 1;
+    background-color: blanchedalmond;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+}
+
+.steps {
+    display: flex;
+    align-items: center;
+}
+
+.step {
+    height: 5rem;
+    width: 5rem;
+    border: 4px solid;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.connector {
+    width: 10rem;
+    border: 2px solid;
+}
+
+.active {
+    color: darkblue;
+}
+
+.disabled {
+    opacity: 0.3;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
 }
