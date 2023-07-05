@@ -51,10 +51,6 @@ body {
     gap: 5rem;
 }
 
-.section {
-    display: flex;
-}
-
 .steps {
     display: flex;
     align-items: center;
@@ -142,4 +138,26 @@ body {
     width: 100%;
     text-align: center;
     padding: 1rem;
+}
+
+@media (max-width: 587px) {
+
+    .steps {
+        width: 90%;
+    }
+
+    .step {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .label {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+
+    .connector {
+        width: unset;
+        flex-grow: 1;
+    }
 }
