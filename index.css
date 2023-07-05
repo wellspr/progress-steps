@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Open+Sans&display=swap');
+
 @keyframes activate {
     0% { background-image: linear-gradient(to right, darkblue, darkblue 0%, rgb(0, 0, 139, 0.3) 0%); }
     25% { background-image: linear-gradient(to right, darkblue, darkblue 25%, rgb(0, 0, 139, 0.3) 25%); }
@@ -33,6 +35,8 @@ body {
     justify-content: space-between;
 
     color: darkblue;
+
+    font-family: 'Comfortaa', cursive;
 }
 
 .header {
@@ -77,6 +81,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .connector {
@@ -118,7 +124,7 @@ body {
     border: none;
     height: 4rem;
     width: 10rem;
-    border-radius: 1.2rem;
+    border-radius: 2rem;
     background-color: darkblue;
     color: aliceblue;
     font-size: 1.4rem;
@@ -138,6 +144,7 @@ body {
     width: 100%;
     text-align: center;
     padding: 1rem;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media (max-width: 587px) {
@@ -147,13 +154,13 @@ body {
     }
 
     .step {
-        height: 3rem;
-        width: 3rem;
+        height: 4rem;
+        width: 4rem;
     }
 
     .label {
-        height: 2.4rem;
-        width: 2.4rem;
+        height: 3.4rem;
+        width: 3.4rem;
     }
 
     .connector {
