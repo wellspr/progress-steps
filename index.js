@@ -12,16 +12,10 @@ const setUp = () => {
     let stepsLabel = 1;
 
     steps.forEach(step => {
-        step.innerHTML = String(stepsLabel);
-        step.classList.add("disabled");
+        step.querySelector(".label").innerHTML = String(stepsLabel);
         stepsLabel++;
     });
 
-    connectors.forEach(connector => {
-        connector.classList.add("disabled");
-    });
-
-    steps[0].classList.remove("disabled");
     disableButtonBack();
 }
 
@@ -34,9 +28,8 @@ const enableNextStep = () => {
     console.log(currentStep, currentConnector);
 
     if (currentStep < steps.length) {
-
-        steps[currentStep].classList.remove("disabled");
-        connectors[currentConnector].classList.remove("disabled");
+        connectors[currentConnector].classList.add("connector-enabled");
+        steps[currentStep].classList.add("step-enabled");
 
         currentStep++;
         currentConnector++;
@@ -59,8 +52,18 @@ const disablePreviousStep = () => {
         currentStep--;
         currentConnector--;
 
-        steps[currentStep].classList.add("disabled");
-        connectors[currentConnector].classList.add("disabled");
+        steps[currentStep].classList.add("disabled"); // Lasts 200ms
+
+        setTimeout(() => {
+            steps[currentStep].classList.remove("disabled");
+            connectors[currentConnector].classList.add("disabled");
+        }, 200);
+        
+        setTimeout(() => {
+            connectors[currentConnector].classList.remove("disabled");
+            steps[currentStep].classList.remove("step-enabled");
+            connectors[currentConnector].classList.remove("connector-enabled");
+        }, 400);
     }
 
     if (currentStep === 1) {
